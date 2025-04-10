@@ -2,8 +2,8 @@
 The integration of vector embeddings with graph databases presents a transformative approach to Retrieval-Augmented Generation (RAG) systems, particularly when applied to complex structured data such as documents. This repository explores using LLM embedding models in conjunction with LLMSherpa Ingestor for parsing documents and storing embeddings in Neo4j's AuraDB. 
 
 ## Team Member Information
--- Aditya Raj (22BDS002)
--- Akash Nayak (22BDS003)
+* Aditya Raj (22BDS002)
+* Akash Nayak (22BDS003)
 
 ## Initialisation steps for Neo4j Aura DB:
 ### LLMSherpa Ingestor Local Server Initialisation (https://github.com/nlmatics/nlm-ingestor/)
@@ -51,8 +51,8 @@ Look at the nodes and relationships defined on the Neo4j instance console at htt
 Connect your Neo4j AuraDB instance to your EC2 instance. Generate your .pem (for UNIX) certificate to authorise SCP transfer from EC2. 
 
 (If running locally) Pull the following docker image from either:
--- DockerHub - https://hub.docker.com/r/docker/genai
--- Github - https://github.com/docker/genai-stack
+* DockerHub - https://hub.docker.com/r/docker/genai
+* Github - https://github.com/docker/genai-stack
 
 
 Execute the following commands in your local terminal to copy your code onto the EC2 Instance - 
