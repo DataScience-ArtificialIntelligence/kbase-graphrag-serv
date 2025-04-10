@@ -1,9 +1,27 @@
 # Graph-Augmented RAG using LLMSherpa: A Scalable Semantic Retrieval Service
-The integration of vector embeddings with graph databases presents a transformative approach to Retrieval-Augmented Generation (RAG) systems, particularly when applied to complex structured data such as documents. This repository explores using LLM embedding models in conjunction with LLMSherpa Ingestor for parsing documents and storing embeddings in Neo4j's AuraDB. 
+The integration of vector embeddings with graph databases presents a transformative approach to Retrieval-Augmented Generation (RAG) systems, particularly when applied to complex structured data such as documents. This repository explores using LLM embedding models in conjunction with LLMSherpa Ingestor for parsing documents and storing embeddings in Neo4j's AuraDB.  (Report - https://drive.google.com/file/d/1xQPEk8Gxrql3_J5fKBlG4xRfCCNgaDXg/view?usp=sharing)
 
 ## Team Member Information
 * Aditya Raj (22BDS002)
 * Akash Nayak (22BDS003)
+
+## Project Structure
+
+```
+kbase-graphrag-serv/
+│── genai-stack/             
+│   ├── chains.py          # Code for Llangchain, replace with chains.py in pulled image from docker/genai-stack
+│   ├── cs_bot_papers.py            # Replace with cs_bot_papers.py in pulled image from docker/genai-stack
+│   ├── requirements.txt    # Python Library Requirements
+|
+│── graph-rag/              
+|   ├── KGEmbedding_Populate.ipynb   # Embedding Creation on Chunks uploaded on neo4j AuraDB
+|   ├── LayoutPDFReader_KGLoader.ipynb  # llmsherpa ingestor initialisation, neo4j AuraDB schema definition
+|
+│── t5-finetuned-model-code            
+|   ├── t5_Small_ResSum_Training.ipynb  # Jupyter notebook, fine tuning code and evaluation code (Can use as Local model, if don't want to utilise OpenAI's GPT-3.5 model, suitable only for text summarization)
+```
+
 
 ## Initialisation steps for Neo4j Aura DB:
 ### LLMSherpa Ingestor Local Server Initialisation (https://github.com/nlmatics/nlm-ingestor/)
@@ -50,9 +68,11 @@ Look at the nodes and relationships defined on the Neo4j instance console at htt
 ## Initialisation steps for AWS EC2:
 Connect your Neo4j AuraDB instance to your EC2 instance. Generate your .pem (for UNIX) certificate to authorise SCP transfer from EC2. 
 
-(If running locally) Pull the following docker image from either:
+(Run Locally) Pull the following docker image from either:
 * DockerHub - https://hub.docker.com/r/docker/genai
 * Github - https://github.com/docker/genai-stack
+
+After pulling the image replace the files with the same names i.e. chains.py and cs_bot_papers.py found under the genai-stack folder in this repo. Replace information such as your neo4j credentials and Open-ai key or Ollama URL in cs_bot_papers.py.
 
 
 Execute the following commands in your local terminal to copy your code onto the EC2 Instance - 
