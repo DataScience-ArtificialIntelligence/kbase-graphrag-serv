@@ -21,7 +21,7 @@ kbase-graphrag-serv/
 |   ├── LayoutPDFReader_KGLoader.ipynb  # llmsherpa ingestor initialisation, neo4j AuraDB schema definition
 |
 │── t5-finetuned-model-code            
-|   ├── t5_Small_ResSum_Training.ipynb  # Jupyter notebook, fine tuning code and evaluation code (Can use as Local model, if don't want to utilise OpenAI's GPT-3.5 model, suitable only for text summarization)
+    ├── t5_Small_ResSum_Training.ipynb  # Jupyter notebook, fine tuning code and evaluation code (Can use as Local model, if don't want to utilise OpenAI's GPT-3.5 model, suitable only for text summarization)
 ```
 
 
