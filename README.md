@@ -1,7 +1,7 @@
 # Graph-Augmented RAG using LLMSherpa: A Scalable Semantic Retrieval Service
 The integration of vector embeddings with graph databases presents a transformative approach to Retrieval-Augmented Generation (RAG) systems, particularly when applied to complex structured data such as documents. This repository explores using LLM embedding models in conjunction with LLMSherpa Ingestor for parsing documents and storing embeddings in Neo4j's AuraDB.  
 
-(Report - https://drive.google.com/file/d/1xQPEk8Gxrql3_J5fKBlG4xRfCCNgaDXg/view?usp=sharing)
+Report - https://drive.google.com/file/d/1xQPEk8Gxrql3_J5fKBlG4xRfCCNgaDXg/view?usp=sharing
 
 ## Team Member Information
 * Aditya Raj (22BDS002)
