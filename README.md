@@ -78,10 +78,10 @@ bash
 cd ~/chatbot
 ```
 4. Run on EC2
-Assuming your main script is app.py, run:
+Assuming your main script is cs_bot_papers.py, run:
 ```
 bash
-streamlit run app.py --server.port 8501 --server.enableCORS false --server.enableXsrfProtection false
+streamlit run cs_bot_papers.py --server.port 8501 --server.enableCORS false --server.enableXsrfProtection false
 ```
 5. Access the given link provided on the EC2 Terminal
 The service will be deployed on EC2, and the user can now interact with it. To monitor performance, the user may check the monitoring tab on the EC2 instance.
